@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL Shortener Microservice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body class="text-center container" style="background-color:#fafafa; font-family: 'Roboto', sans-serif;">
+    <h1 class="mt-3 mb-3 ">URL Shortener Microservice</h1>
+    <hr>
+
+    <code>
+        <p> User can POST a URL to [project_url]/api/shorturl/new and it will receive a shortened URL in the JSON response.</p>
+        <p>Example : {"original_url":"www.google.com","short_url":1}</p>
+
+        <p>If user passes an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response will contain an error</p>
+         <p>{"error":"invalid URL"}</p>
+        <p>When user visits the shortened URL, it will redirect the user to the original link</p>
+    
+    </code>
+    <form action="api/shorturl/new" method="POST">
+        <label for="url_input">URL to be shortened</label>
+        <input id="url_input" type="text" name="url">
+        <input type="submit" value="POST URL">
+    </form>
+
+    <h4 class="mt-4">Example Usage:</h4>
+    <a href="/api/shorturl/TPRev" target="_blank">[base url]/api/shortcut/TPRev</a>
+    </br>
+
+    <h4 class="mt-4">Will Redirect To :</h4>
+    <code><p>https://github.com</p></code>
+    <p></p>
+
+
+    <p class="mt-5">Made with <i class="fa fa-heart" style="color:#FF5252"></i> by <a
+            href="https://github.com/sureshmangs">Suresh Mangs</a></p>
+
+</body>
+
+</html>
